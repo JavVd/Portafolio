@@ -24,69 +24,104 @@
         Tu navegador no soporta videos HTML5.
       </video>
       <div class="overlay position-absolute w-100 h-100"></div>
-      <div class="container text-light position-relative z-3">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="display-3 fw-bold">"Hellow World!"</h1>
-            <p class="lead">
+      <div
+        class="container text-light position-relative z-3 d-flex flex-column"
+      >
+        <div class="row flex-grow-1">
+          <div class="col-12 my-auto">
+            <h1 id="typewriter" class="display-5 fw-bold"></h1>
+            <p id="pres-hero">
               Soy <strong>Javier Valdés</strong> <br />
-              Desarrollador web FullStack
+              Desarrollador Web FullStack
             </p>
-            <a href="#servicios" class="btn btn-primary btn-lg mt-3"
-              >Proyectos</a
-            >
           </div>
         </div>
       </div>
     </section>
 
-    <h2 class="text-center">Tecnologías</h2>
-
-    <div class="image-container">
-      <img
-        src="./assets/image/Home - Viva Ruso clases de ruso.png"
-        alt="Descripción de la imagen"
-      />
-    </div>
-
-    <!-- <div class="d-flex flex-wrap justify-content-evenly">
-      <div class="card-tec">
-        <i class="fa-regular faheart"></i>
-        <div class="image">
-          <img src="./assets/image/html -v3.png" />
-          <img class="blur" src="./assets/image/html -v3.png" />
+    <!-- Acerca de mi -->
+    <section class="sobremi">
+      <div class="principal">
+        <h2 class="text-center mb-5 white">Conoceme</h2>
+        <div class="conoceme-cont">
+          <div class="conoceme-descripcion">
+            <h3 class="mb-3">Mi Experiencia</h3>
+            <div class="conoceme-main-p">
+              <div class="conoceme-parrafo">
+                <p>
+                  Mi especialidad es el desarrollo frontend, entregando
+                  proyectos atractivos con mis conocimientos en UI/UX
+                </p>
+                <p>
+                  Durante mi carrera profesional he tenido la experiencia de
+                  trabajar con equipos grandes, pequeños y tambien de
+                  liderarlos, sacando a delante proyectos para diferentes tipos
+                  de empresas, tanto pequeñas como medianas
+                </p>
+                <p>
+                  Estoy abierto a trabajos que me den la oportunidad de aprender
+                  y crecer como profecional, si mis habilidades te resultan
+                  utiles, no dudes en contactarme
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="conoceme-skills">
+            <h3 class="mb-3">Mis conocimientos</h3>
+            <div class="skills-principal">
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/HTML.svg"
+                  type=""
+                ></object>
+                HTML
+              </div>
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/CSS.svg"
+                  type=""
+                ></object>
+                CSS
+              </div>
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/JAVASCRIPT.svg"
+                  type=""
+                ></object>
+                JavaScript
+              </div>
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/WORDPRESS.svg"
+                  type=""
+                ></object>
+                Wordpress
+              </div>
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/GITLAB.svg"
+                  type=""
+                ></object>
+                GitLab
+              </div>
+              <div class="skills">
+                <object
+                  class="svg mb-2"
+                  data="./assets/image/GITHUB.svg"
+                  type=""
+                ></object>
+                GitHub
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text"></div>
       </div>
-      <div class="card-tec">
-        <i class="fa-regular faheart"></i>
-        <div class="image">
-          <img src="./assets/image/css-v3.webp" />
-          <img class="blur" src="./assets/image/css-v3.webp" />
-        </div>
-        <div class="text"></div>
-      </div>
-      <div class="card-tec">
-        <i class="fa-regular faheart"></i>
-        <div class="image">
-          <img src="./assets/image/js-v3.png" />
-          <img class="blur" src="./assets/image/js-v3.png" />
-        </div>
-        <div class="text"></div>
-      </div>
-    </div> -->
-
-    <div class="w-100 d-flex justify-content-evenly">
-      <!-- Card-Wordpress -->
-      <div class="card-tec">
-        <i class="fa-regular faheart"></i>
-        <div class="image">
-          <img src="./assets/image/wordpress.png" />
-          <img class="blur" src="./assets/image/wordpress.png" />
-        </div>
-        <div class="text"></div>
-      </div>
-    </div>
+    </section>
 
     <!-- Boostrap -->
     <script
@@ -94,6 +129,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <!-- JS propio -->
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
