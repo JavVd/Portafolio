@@ -6,9 +6,6 @@
   height: 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuye el contenido entre el centro y el fondo */
-  align-items: center;
 }
 
 .video-background {
@@ -22,7 +19,7 @@
 }
 
 .overlay {
-  background: rgba(31, 31, 31, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
 
@@ -36,7 +33,6 @@
 #pres-hero {
   font-family: 'Courier Prime', monospace;
   font-size: 1.5rem;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
@@ -64,14 +60,14 @@
   margin-bottom: 5rem;
 }
 
-/* Seccion Sobre mi */
-.sobremi {
-  padding: 6rem 0;
+section {
   background-color: #1a191d;
   color: white;
   font-family: 'Courier Prime', monospace;
+  padding: 5rem;
 }
 
+/* Seccion Sobre mi */
 .principal {
   margin: auto;
   width: 90%;
@@ -80,7 +76,6 @@
 .principal h2 {
   font-family: 'Courier Prime', monospace;
   font-size: 3rem;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
@@ -170,17 +165,6 @@
   flex-wrap: wrap;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .skills {
   display: flex;
   flex-direction: column;
@@ -202,7 +186,6 @@
     border-radius 0.5s ease,
     transform 0.5s ease;
   overflow: hidden;
-  transform: scale(1);
   opacity: 0;
 }
 
@@ -211,13 +194,77 @@
 }
 
 .skills:hover {
-  transform: scale(1.1);
   padding: 0.5rem;
   background: #1f88da;
   border-radius: 5px;
 }
 
+/* Animación de fadeInUp con crecimiento */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(1); /* Inicialmente más abajo y reducido */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1); /* En su posición original y tamaño normal */
+  }
+}
+
 .svg {
   width: 100px;
   height: 100px;
+}
+
+/* Seccion Proyectos */
+.proyectos {
+  padding: 6rem 0;
+  background-color: #1a191d;
+  color: white;
+  text-align: center;
+}
+
+.proyectos-main {
+  width: 90%;
+  display: inline-block;
+}
+
+.proyectos h2 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Cambia el color de fondo de las tarjetas */
+.card.h-100 {
+  background-color: #1f88da; /* Cambia este color según lo que prefieras */
+  border-radius: 10px; /* Opcional: agrega bordes redondeados */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+/* Aplica el efecto grow solo a las imágenes */
+.card.h-100 img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease; /* Transición suave */
+}
+
+.card.h-100 img:hover {
+  transform: scale(1.1); /* Aplica el efecto de agrandamiento */
+}
+
+.card-body h3 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.card-body p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
 }
