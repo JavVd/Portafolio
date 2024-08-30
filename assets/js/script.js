@@ -1,3 +1,17 @@
+// Efecto para el Header
+document.addEventListener('scroll', function () {
+  const header = document.querySelector('.sticky-header');
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) {
+    header.classList.remove('hidden');
+    header.classList.add('visible');
+  } else {
+    header.classList.remove('visible');
+    header.classList.add('hidden');
+  }
+});
+
 // Efecto de escritura
 document.addEventListener('DOMContentLoaded', function () {
   const text = '"Hello World!"';
@@ -28,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   typeWriter();
 });
 
+// efecto fade skills
 document.addEventListener('DOMContentLoaded', function () {
   const skillsElements = document.querySelectorAll('.skills');
 
@@ -47,5 +62,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
   skillsElements.forEach((el) => {
     observer.observe(el);
+  });
+});
+
+// Header
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const menuLinks = document.querySelectorAll('.nav-menu a');
+
+  menuToggle.addEventListener('click', function () {
+    navMenu.classList.toggle('open');
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', function () {
+      navMenu.classList.remove('open');
+    });
+  });
+
+  // Cerrar el menú al hacer clic fuera de él
+  document.addEventListener('click', function (event) {
+    if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      navMenu.classList.remove('open');
+    }
   });
 });
